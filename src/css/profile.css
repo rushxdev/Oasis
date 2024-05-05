@@ -1,0 +1,54 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+    width: 97%;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 1);
+    padding: 20px;
+    text-align: center;
+}
+
+#profile-image {
+    width: 200px;
+    height: 200px;
+}
+
+.user-details {
+    background-color: whitesmoke;
+    border: 1px solid #b1b1b1;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    width: 50%;
+    margin: auto;
+    text-align: left;
+    padding: 10px;
+}
+
+.user-data {
+    padding: 5px;
+    border-bottom: 1px solid #000000;
+}
+
+.profile-left {
+    position: absolute;
+    width: 30%;
+    left: 0;
+}
+
+.profile-right {
+    position: absolute;
+    right: 0;
+    width: 70%;
+}
+
+.profile-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.profile-table th, .profile-table td {
+    border: 1px solid black;
+}

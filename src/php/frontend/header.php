@@ -1,44 +1,57 @@
-<?php
-session_start();
-?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>OASIS</title>
-</head>
-
-<body>
-    <div class="navbar">
-        <div class="logo"><a href="index.php">OASIS</a></div>
-        <div class="nav-items">
-            <a href="index.php" class="active">Home</a>
-            <a href="#">About Us</a>
-            <?php
-            if (isset($_SESSION["name"])) {
-                echo '<a href="channeling.php">Channeling</a>';
-            } else {
-                echo '<a href="login.php">Channeling</a>';
-            }
-            ?>
-            <a href="#">Healthcare Locator</a>
-            <a href="#">Health Blog</a>
-            <a href="#">Contact Us</a>
-        </div>
-        <div class="accounts">
-            <?php
-            if (isset($_SESSION["name"])) {
-                echo '<a href="#profile.php">' . $_SESSION["name"] . '</a>';
-                echo '<span class="separator"> | </span>';
-                echo '<a href="includes/logout.inc.php">Log out</a>';
-            } else {
-                echo '<a href="login.php">Login</a>';
-                echo '<span class="separator"> | </span>';
-                echo '<a href="register.php">Register</a>';
-            }
-            ?>
-        </div>
+<div class="navbar">
+    <div class="logo"><a href="index.php">OASIS</a></div>
+    <div class="nav-items">
+        <a href="index.php" id="nav_home_button">Home</a>
+        <?php if (isset($_SESSION["name"])) { ?>
+            <a href="profile.php" id="nav_profile_button">Profile</a>
+            <a href="#" id="nav_channeling_button">Channeling</a>
+            <a href="prescription.php" id="nav_prescription_button">Prescription Refill</a>
+            <a href="#" id="nav_consulting_button">Consulting & Advice</a>
+        <?php } else { ?>
+            <a href="#" id="nav_about_button">About Us</a>
+            <a href="#" id="nav_branch_button">Branch Locator</a>
+            <a href="#" id="nav_blog_button">Health Blog</a>
+            <a href="#" id="nav_contact_button">Contact Us</a>
+        <?php } ?>
     </div>
+    <div class="accounts">
+        <?php
+        if (isset($_SESSION["name"])) {
+            ?>
+            <a href="#profile.php"><?php echo $_SESSION["name"]; ?></a>
+            <span class="separator"> | </span>
+            <a href="../backend/logout.inc.php">Log out</a>
+            <?php
+        } else {
+            ?>
+            <a href="login.php">Login</a>
+            <span class="separator"> | </span>
+            <a href="register.php">Register</a>
+            <?php
+        }
+        ?>
+    </div>
+</div>
+<script>
+    var currentUrl = window.location.href;
+
+    if (currentUrl.includes("index.php")) {
+        document.getElementById("nav_home_button").classList.add("active");
+    } else if (currentUrl.includes("profile.php")) {
+        document.getElementById("nav_profile_button").classList.add("active");
+    } else if (currentUrl.includes("channeling.php")) {
+        document.getElementById("nav_channeling_button").classList.add("active");
+    } else if (currentUrl.includes("prescription.php")) {
+        document.getElementById("nav_prescription_button").classList.add("active");
+    } else if (currentUrl.includes("consulting.php")) {
+        document.getElementById("nav_consulting_button").classList.add("active");
+    } else if (currentUrl.includes("about.php")) {
+        document.getElementById("nav_about_button").classList.add("active");
+    } else if (currentUrl.includes("branch.php")) {
+        document.getElementById("nav_branch_button").classList.add("active");
+    } else if (currentUrl.includes("blog.php")) {
+        document.getElementById("nav_blog_button").classList.add("active");
+    } else if (currentUrl.includes("contact.php")) {
+        document.getElementById("nav_contact_button").classList.add("active");
+    }
+</script>

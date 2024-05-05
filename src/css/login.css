@@ -1,0 +1,115 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo1 {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 50px;
+    color: #1f118b;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.logo2 {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #1f118b;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.logo3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #1f118b;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.login {
+    color: #1f118b;
+    font-size: 50px;
+}
+
+.login-form {
+    background-color: #ffffff;
+    width: 25%;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    padding-left: 30px;
+    padding-right: 50px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.register-form {
+    background-color: #fff;
+    width: 25%;
+    padding-top: 1px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 50px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+
+.form-group select {
+    width: 106%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+
+.form-links {
+    margin-bottom: 10px;
+}
+
+.form-links a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button a {
+    background-color: #007bff;
+    color: #fff;
+    padding: 1px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button a:hover {
+    background-color: #0056b3;
+}

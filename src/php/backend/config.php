@@ -1,7 +1,7 @@
 <?php
-$con = new mysqli("localhost", "root", "", "oasis");
+$conn = new mysqli("localhost", "root", "", "oasis");
 
-if ($con->connect_error) {
-    die("Coneection Failed" . $con->connect_error);
+if ($conn->connect_error) {
+    die("Coneection Failed" . $conn->connect_error);
 }
 ?>
