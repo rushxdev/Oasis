@@ -5,6 +5,9 @@ include_once ("../backend/config.php");
 $sql = "SELECT * FROM prescription WHERE registered_number = " . $_SESSION["userid"];
 $result = $conn->query($sql);
 
+$appointment_query = "SELECT * FROM appointment WHERE user_id=" . $_SESSION["userid"];
+$appointment_result = $conn->query($appointment_query);
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -89,8 +92,25 @@ $result = $conn->query($sql);
                     </tbody>
                 </table>
             </div>
+            <div id="appointment-table" class="table-div">
+
+            </div>
         </div>
     </div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const errorParam = urlParams.get('success');
+
+        if (errorParam === 'true') {
+            alert('Updated Successfully.');
+            urlParams.delete('success');
+        } else if (errorParam === 'deleted') {
+            alert('Deleted Successfully.');
+            urlParams.delete('success');
+        }
+
+        history.replaceState(null, '', window.location.pathname + '?' + urlParams.toString());
+    </script>
     <?php include_once 'footer.php' ?>
 </body>
 

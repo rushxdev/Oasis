@@ -17,7 +17,7 @@ $pres_sql = "INSERT INTO prescription (registered_number, speciality, doctor, br
 
 
 if ($conn->query($pres_sql)) {
-    header("Location:../frontend/profile.php");
+    header("Location:../frontend/payment.php");
     exit();
 } else {
     header("Location:../frontend/prescription.php?error=submissionFailed");

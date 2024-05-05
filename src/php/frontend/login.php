@@ -17,7 +17,7 @@
                 <input type="text" name="username" placeholder="Email or Username">
             </div>
             <div class="form-group">
-                <input type="password" name="pwd" placeholder="Password">
+                <input type="password" name="password" placeholder="Password">
             </div>
             <div class="form-links">
                 <a href="#">Forgot Password?</a><br>

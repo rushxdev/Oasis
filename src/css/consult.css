@@ -1,0 +1,67 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f2f2f2;
+
+}
+
+form h1 {
+
+  text-align: center;
+
+}
+
+form {
+  background-color: #ffffff;
+
+}
+
+.input-row {
+  display: flex;
+  justify-content: space-between;
+  /* Align items with space between */
+  width: 100%;
+
+}
+
+.left-input label,
+.right-input label {
+  display: block;
+  /* Labels display as block elements */
+}
+
+
+form {
+  width: 800px;
+  margin: 0 auto;
+
+  padding: 50px;
+  padding-top: 20px;
+  border-radius: 5px;
+  border: 1px solid black;
+  border: 2px solid rgb(0, 0, 0);
+}
+
+form input[type="submit"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+form input[type="submit"] {
+  background-color: #01522f;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+form input[type="submit"]:hover {
+  background-color: rgb(19, 157, 116);
+}
+
+h1 {
+  text-align: center;
+}

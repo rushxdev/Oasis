@@ -26,3 +26,30 @@ CREATE TABLE doctors (
     doctor_name varchar(100) NOT NULL,
     doctor_specialty varchar(100)
 );
+
+CREATE TABLE payment (
+    payment_id INT AUTO_INCREMENT PRIMARY KEY,
+    service_type VARCHAR(50),
+    salutation VARCHAR(20),
+    reference_no VARCHAR(100),
+    first_name VARCHAR(100),
+    last_name VARCHAR(100),
+    contact_no VARCHAR(20),
+    email VARCHAR(100),
+    amount VARCHAR(100),
+    amount_method VARCHAR(20)
+);
+
+CREATE TABLE payment_history (
+    payment_id INT AUTO_INCREMENT PRIMARY KEY,
+    service_type VARCHAR(50),
+    salutation VARCHAR(20),
+    reference_no VARCHAR(100),
+    first_name VARCHAR(100),
+    last_name VARCHAR(100),
+    contact_no VARCHAR(20),
+    email VARCHAR(100),
+    amount VARCHAR(100),
+    amount_method VARCHAR(20),
+    refunded VARCHAR(50)
+);

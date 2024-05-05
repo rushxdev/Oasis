@@ -21,7 +21,7 @@
     border: 1px solid #b1b1b1;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    width: 50%;
+    width: 100%;
     margin: auto;
     text-align: left;
     padding: 10px;
@@ -33,7 +33,6 @@
 }
 
 .profile-left {
-    position: absolute;
     width: 30%;
     left: 0;
 }

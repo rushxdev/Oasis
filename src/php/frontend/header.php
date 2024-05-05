@@ -4,9 +4,10 @@
         <a href="index.php" id="nav_home_button">Home</a>
         <?php if (isset($_SESSION["name"])) { ?>
             <a href="profile.php" id="nav_profile_button">Profile</a>
-            <a href="#" id="nav_channeling_button">Channeling</a>
+            <a href="channeling.php" id="nav_channeling_button">Channeling</a>
             <a href="prescription.php" id="nav_prescription_button">Prescription Refill</a>
-            <a href="#" id="nav_consulting_button">Consulting & Advice</a>
+            <a href="Consultation.php" id="nav_consulting_button">Consulting & Advice</a>
+            <a href="#" id="nav_faq_button">FAQ's</a>
         <?php } else { ?>
             <a href="#" id="nav_about_button">About Us</a>
             <a href="#" id="nav_branch_button">Branch Locator</a>
