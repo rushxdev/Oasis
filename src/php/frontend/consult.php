@@ -33,7 +33,7 @@ if (isset($_POST['submit'])) {
         $fileError = $_FILES['fileToUpload']['error'];
         $fileType = $_FILES['fileToUpload']['type'];
 
-        $target_dir = "C:\Users\acer\OneDrive - Sri Lanka Institute of Information Technology\IWT\Oasis\src\image";
+        $target_dir = "C:\Users\acer\OneDrive - Sri Lanka Institute of Information Technology\IWT\Oasis\src\upload\\";
         $target_file = $target_dir . basename($fileName);
 
         // Check if file already exists
@@ -43,7 +43,7 @@ if (isset($_POST['submit'])) {
         }
 
         // Check file size
-        if ($_FILES["fileToUpload"]["size"] > 500000) {
+        if ($_FILES["fileToUpload"]["size"] > 50000000) {
             echo "Sorry, your file is too large.";
             exit;
         }
@@ -52,21 +52,21 @@ if (isset($_POST['submit'])) {
         $fileExt = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
         $allowed = array('pdf', 'doc', 'docx');
 
-
-        if (in_array($fileExt, $allowed) && $fileError === 0 && $fileSize > 0) {
+        // Validation comment krla thiyena eka ain krnna
+        if (/*in_array($fileExt, $allowed) &&*/ $fileError === 0 && $fileSize > 0) {
 
             //header("Location: ReservationSuccess.html");
 
             // Move uploaded file to destination
             if (move_uploaded_file($fileTmpName, $target_file)) {
-                $Reg_no = $_SESSION["userid"];
+                $registered_number = $_SESSION["userid"];
                 $username = $_SESSION["username"];
 
                 // Insert data into database
-                $query = "INSERT INTO booking (Reg_no, username, speciality, doctor_name, age, patient_name, status1, gender, medical_documents, medical_history) 
+                $query = "INSERT INTO booking (registered_number, username, speciality, doctor_name, age, patient_name, status1, gender, medical_documents, medical_history) 
                 VALUES (?,?,?,?,?,?,?,?,?,?)";
                 $stmt = $conn->prepare($query);
-                $stmt->bind_param("ssssssssss", $Reg_no, $username, $speciality, $drName, $age, $patient_name, $status1, $gender, $target_file, $medicalHistory);
+                $stmt->bind_param("ssssssssss", $registered_number, $username, $speciality, $drName, $age, $patient_name, $status1, $gender, $target_file, $medicalHistory);
 
                 if ($stmt->execute()) {
                     // Redirect after successful submission

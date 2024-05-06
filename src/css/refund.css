@@ -1,0 +1,323 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    }
+    
+    html {
+    scroll-behavior:smooth;
+    height: 100%;
+    }  
+    
+      
+      .header {
+          padding: 65px;
+          text-align: center;
+          background:rgb(18, 138, 185);
+          color: rgb(248, 248, 248);
+          position: fixed;
+          z-index: 1000;
+          width: 100%;
+          top:-20px;
+          height:130px;
+        }
+        
+      
+        .header h1 {
+          font-size: 30px;
+          word-spacing: 15px ;
+          letter-spacing: 1.5px ;
+          text-align: center;
+          padding: 30px;
+          position:absolute;
+          width: 80%;
+          top: 5px;
+          margin-left: 80px;
+          margin-top: 20px;
+        }
+        
+        .header img.logo {
+          border-radius: 8px;
+          position: absolute;
+          top: 35px; 
+          left: 40px;
+          width: 80px;
+          height: 80px;
+          object-fit: cover;
+          border-radius: 50%;
+          background: #ffffff;
+          padding: 1px; 
+      
+        }
+        
+        .header img.user
+        {
+          border-radius: 8px;
+          position: absolute;
+          top: 50px;
+          right:75px;
+          width: 50px;
+          height: 50px;
+          object-fit: cover;
+      
+        }
+        
+       
+        
+        
+        #logout-button{
+          background-color: #4a0443; /* Background color of the button */
+          color: #fff; /* Text color */
+          padding: 1px 5px; /* Padding around the button text */
+          font-size: 11px; /* Font size */
+          border: none; /* Remove button border */
+          border-radius: 3px; /* Rounded corners */
+          cursor: pointer; /* Show pointer cursor on hover */
+          transition: background-color 0.3s ease;
+          position: absolute;
+          margin-left: 650px;
+          top: 60px;
+          width:50px;
+          height:30px;
+          
+        }
+        
+        #logout-button:hover{
+          background-color: #ffffff; /* Background color of the button */
+          color: #000000; /* Text color */
+          
+        }
+  
+      
+        .login-button:hover  
+         {
+          background-color:#4a0443; /* Darker background color on hover */
+        }
+      
+        #signup-button:hover
+        {
+          background-color: #0b123a; /* Darker background color on hover */
+        }
+    
+    
+        #nav1 {
+            list-style-type: none;
+            margin: 0;
+            padding: 1px;
+            overflow: hidden;
+            background-color: #122177;
+            position: fixed;
+            z-index: 1000;
+            width: 100%;
+             height: 40px;
+              top: 110px; 
+          }
+          
+          #nav1 li {
+            float: left;
+            width: 20%;
+            border-right: #333;
+          }
+    
+          #nav1 li:last-child a {
+            border-right: none;
+        }
+          
+          #nav1 li a {
+          
+    
+            font-size:18px;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 10px 10px;
+            text-decoration: none;
+            width:220px;
+          }
+          
+          #nav1 li a:hover {
+            background-color: #111;
+            width:100%;
+          }
+
+          
+          
+    /*--------------------------footer----------------*/
+footer {
+  background-color: rgb(18, 138, 185);
+  color: #fff;
+  padding: 20px 0;
+  height:240px;
+}
+  
+  .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.footerlogo img{
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  background: #ffffff;
+  padding: 2px;  
+}
+
+.mid1-section  .mid2-section {
+  display: flex;
+  align-items: center;
+  top:1px;
+}
+
+
+.social-media{
+  font-size: 18px;
+  
+}
+
+
+.social-media h4{
+  margin-bottom: 5px;
+}
+.social-media a {
+  color: #070303;
+  font-size: 35px;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+.social-media img{
+  width: 100px;
+   height: 45px;
+}
+
+#quicklinks{
+  list-style-type: none;
+  margin-top: 5px;
+      
+  
+}
+.mid2-section h4{
+  text-align: center;
+  margin-right: 75px;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+#quicklinks a{
+  text-decoration: none;
+  font-size: 18px;
+  color: rgba(77, 6, 143, 0.804);
+  font-weight: 550;
+  margin-left: 15px;
+}
+#quicklinks a:hover{
+  color: #d199ef;
+
+
+}
+.mid1-section #p1{
+  font-size: 25px;
+  margin-right: 100px;
+  text-align: center;
+}
+
+.mid1-section #p2{
+  font-size: 25px;
+  text-align: center;
+  margin-right: 70px;
+}
+
+.reserved{
+  text-align: center;
+  margin-left: 80px;
+}
+
+/* refund_form.css */
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+.container1 {
+    max-width: 800px;
+    margin: 50px auto 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 5px;
+    
+}
+
+.column {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.column-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+select {
+    width: calc(100% - 10px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+select {
+    width: 100%;
+}
+
+.refund_btn {
+    background-color: #c60000;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    font-size:15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.refund_btn:hover {
+    background-color: #ff0000;
+}
+
+img {
+    max-width: 100%;
+    height:auto;
+    margin-bottom: 20px;
+}

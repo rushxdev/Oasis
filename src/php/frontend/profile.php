@@ -5,6 +5,9 @@ include_once ("../backend/config.php");
 $sql = "SELECT * FROM prescription WHERE registered_number = " . $_SESSION["userid"];
 $result = $conn->query($sql);
 
+$booking_sql = "SELECT * FROM booking WHERE registered_number = " . $_SESSION["userid"];
+$booking_result = $conn->query($booking_sql);
+
 //$appointment_query = "SELECT * FROM appointment WHERE user_id=" . $_SESSION["userid"];
 //$appointment_result = $conn->query($appointment_query);
 
@@ -93,6 +96,35 @@ $result = $conn->query($sql);
                 </table>
             </div>
             <div id="appointment-table" class="table-div">
+                <table class="profile-table">
+                    <thead>
+                        <tr>
+                            <th>Specialty</th>
+                            <th>Doctor Name</th>
+                            <th>Status</th>
+                            <th>Refund</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+
+
+                        while ($row2 = $booking_result->fetch_assoc()) {
+                            echo "<tr>";
+                            echo "<td>" . $row2['speciality'] . "</td>";
+                            echo "<td>" . $row2['doctor_name'] . "</td>";
+                            echo "<td>" . $row2['status1'] . "</td>";
+                            echo "<td>";
+                            echo "<form action='refund.php' method='post'>";
+                            echo "<input type='hidden' name='booking_id' value='" . $row2['registered_number'] . "'>";
+                            echo "<button type='submit' class='delete' name='delete_booking'>Delete</button>";
+                            echo "</form>";
+                            echo "</td>";
+                            echo "</tr>";
+                        }
+                        ?>
+                    </tbody>
+                </table>
 
             </div>
         </div>

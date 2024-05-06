@@ -53,3 +53,18 @@ CREATE TABLE payment_history (
     amount_method VARCHAR(20),
     refunded VARCHAR(50)
 );
+
+CREATE TABLE booking (
+    booking_id INT AUTO_INCREMENT PRIMARY KEY,
+    registered_number INT,
+    username VARCHAR(255),
+    speciality VARCHAR(255),
+    doctor_name VARCHAR(255),
+    age INT,
+    patient_name VARCHAR(255),
+    status1 VARCHAR(255),
+    gender VARCHAR(255),
+    medical_documents VARCHAR(255),
+    medical_history TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
