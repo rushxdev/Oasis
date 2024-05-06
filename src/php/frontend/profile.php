@@ -5,8 +5,8 @@ include_once ("../backend/config.php");
 $sql = "SELECT * FROM prescription WHERE registered_number = " . $_SESSION["userid"];
 $result = $conn->query($sql);
 
-$appointment_query = "SELECT * FROM appointment WHERE user_id=" . $_SESSION["userid"];
-$appointment_result = $conn->query($appointment_query);
+//$appointment_query = "SELECT * FROM appointment WHERE user_id=" . $_SESSION["userid"];
+//$appointment_result = $conn->query($appointment_query);
 
 ?>
 <!DOCTYPE html>

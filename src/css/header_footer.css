@@ -17,10 +17,10 @@
 
 .nav-items {
     display: flex;
-
 }
 
 .nav-items a{
+    font-family: Arial, sans-serif !important;
     color: #1f118b;
     text-decoration: none;
     position: relative;

@@ -129,6 +129,6 @@
         }
         ?>
     </div>
-    <a href="profile.php"><button>Back to Home</button></a>
+    <a href="profile.php"><button style= "background-color:#007bff; color:#fff; padding: 8px 16px; border-radius: 4px;">Back to Home</button></a>
 </body>
 </html>

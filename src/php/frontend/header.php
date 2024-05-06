@@ -6,7 +6,7 @@
             <a href="profile.php" id="nav_profile_button">Profile</a>
             <a href="channeling.php" id="nav_channeling_button">Channeling</a>
             <a href="prescription.php" id="nav_prescription_button">Prescription Refill</a>
-            <a href="Consultation.php" id="nav_consulting_button">Consulting & Advice</a>
+            <a href="consultation.php" id="nav_consulting_button">Consulting & Advice</a>
             <a href="#" id="nav_faq_button">FAQ's</a>
         <?php } else { ?>
             <a href="#" id="nav_about_button">About Us</a>
@@ -44,7 +44,7 @@
         document.getElementById("nav_channeling_button").classList.add("active");
     } else if (currentUrl.includes("prescription.php")) {
         document.getElementById("nav_prescription_button").classList.add("active");
-    } else if (currentUrl.includes("consulting.php")) {
+    } else if (currentUrl.includes("consultation.php")) {
         document.getElementById("nav_consulting_button").classList.add("active");
     } else if (currentUrl.includes("about.php")) {
         document.getElementById("nav_about_button").classList.add("active");
