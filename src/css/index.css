@@ -1,0 +1,153 @@
+/* General Styles */
+body {
+    background: linear-gradient(90deg, #c6d1dc 0%, rgba(55, 132, 200, 0.83) 100%);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 40px;
+    box-shadow: 20px 20px 25px 20px rgba(1, 1, 0.5, 0.3);
+    border-radius: 15px;
+}
+
+/* Hero Section */
+.hero-section {
+    background-image: linear-gradient(to right, #cbdecc, #4ab1c3);
+    color: #fff;
+    padding: 80px 0;
+    margin-top: auto;
+    margin-bottom: 50px;
+    border-radius: 15px;
+}
+
+.hero-section h1 {
+    font-size: 36px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* What's New Section */
+.whats-new {
+    background: linear-gradient(90deg, #234568 0%, rgba(47, 128, 199, 0.83) 100%);
+    padding: 40px 0;
+    border-radius: 25px;
+}
+
+.whats-new h2 {
+    font-size: 24px;
+    text-align: center;
+}
+
+.slider {
+    position: relative;
+}
+
+.slide {
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.prev:hover, .next:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.prev {
+    left: 10px;
+    bottom: -120px;
+}
+
+.next {
+    right: 10px;
+    bottom: -120px;
+}
+
+/* Services Section */
+.services {
+    padding: 60px 0;
+}
+
+.services h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.services p {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.service-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.blank {
+    padding: 50px;
+}
+
+.imge img {
+    max-width: 50%; 
+    border-radius: 25px;
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+button {
+    background-color: #0c01a8ce;
+    color: whitesmoke;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+    margin-right: 30px; 
+    margin-bottom: 30px; 
+}
+
+.featured-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #fff;
+}
+
+.featured-text {
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+}
+
+.featured-number {
+    color:rgb(7, 115, 238);
+    font-size: 8rem;
+    margin: 0 10px;
+}
+
+.details{
+    display: flex;
+    padding-top: 30px;
+} 
+

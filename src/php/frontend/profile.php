@@ -8,8 +8,8 @@ $result = $conn->query($sql);
 $booking_sql = "SELECT * FROM booking WHERE registered_number = " . $_SESSION["userid"];
 $booking_result = $conn->query($booking_sql);
 
-//$appointment_query = "SELECT * FROM appointment WHERE user_id=" . $_SESSION["userid"];
-//$appointment_result = $conn->query($appointment_query);
+$appointment_query = "SELECT * FROM appointment WHERE registered_number=" . $_SESSION["userid"];
+$appointment_result = $conn->query($appointment_query);
 
 ?>
 <!DOCTYPE html>
@@ -107,8 +107,6 @@ $booking_result = $conn->query($booking_sql);
                     </thead>
                     <tbody>
                         <?php
-
-
                         while ($row2 = $booking_result->fetch_assoc()) {
                             echo "<tr>";
                             echo "<td>" . $row2['speciality'] . "</td>";
@@ -116,7 +114,7 @@ $booking_result = $conn->query($booking_sql);
                             echo "<td>" . $row2['status1'] . "</td>";
                             echo "<td>";
                             echo "<form action='refund.php' method='post'>";
-                            echo "<input type='hidden' name='booking_id' value='" . $row2['registered_number'] . "'>";
+                            echo "<input type='hidden' name='referance_no' value='" . $row2['booking_id'] . "'>";
                             echo "<button type='submit' class='delete' name='delete_booking'>Delete</button>";
                             echo "</form>";
                             echo "</td>";
@@ -125,7 +123,39 @@ $booking_result = $conn->query($booking_sql);
                         ?>
                     </tbody>
                 </table>
-
+            </div>
+            <div id="appointment-table" class="table-div">
+                <table class="profile-table">
+                    <thead>
+                        <tr>
+                            <th>Doctor Name</th>
+                            <th>Specialty</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Update</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        while ($row3 = $appointment_result->fetch_assoc()) {
+                            echo "<form action='../backend/update.inc.php' method='post'>";
+                            echo "<tr>";
+                            echo "<td>" . $row3['doctor_name'] . "</td>";
+                            echo "<td>" . $row3['specialization'] . "</td>";
+                            echo "<td><input type='date' name='date' value='" . $row3['date'] . "'></td>";
+                            echo "<td><input type='time' name='time' value='" . $row3['time'] . "'></td>";
+                            echo "<td><button type='submit' value='update' class='update' name='update_appointment'>Update</button></td>";
+                            echo "<td>";
+                            echo "<input type='hidden' name='appointment_id' value='" . $row3['appointment_id'] . "'>";
+                            echo "<button type='submit' value='delete' class='delete' name='delete_appointment'>Delete</button>";
+                            echo "</td>";
+                            echo "</tr>";
+                            echo "</form>";
+                        }
+                        ?>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>

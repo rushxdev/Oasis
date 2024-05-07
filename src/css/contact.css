@@ -1,0 +1,127 @@
+body {
+	background: linear-gradient(90deg, #8cbdef 0%, rgba(61, 46, 232, 0.83) 100%);
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px; /* Adjust the font size */
+	margin: 0;
+  
+}
+
+.container {
+  
+	background-color: linear-gradient(90deg, #8cbdef 0%, rgba(61, 46, 232, 0.83) 100%); /* Change to a solid color */
+	border-radius: 25px;
+	box-shadow: 0 20px 30px rgba(0,0,0,0.25), 
+		         	0 20px 20px rgba(0,0,0,0.22);
+	position: static;
+	overflow: hidden;
+	width: 90%; /* Adjust width */
+	max-width: 770px; /* Adjust max-width */
+  height: 90%;
+  max-height: 720px;
+	margin: auto; 
+
+}
+
+h2 {
+  font-size:2rem;
+  margin-bottom:1rem;
+}
+
+.form-container {
+  display:flex;
+}
+
+.left-container {
+  flex:1;
+  background-color: linear-gradient(90deg, #8cbdef 0%, rgba(61, 46, 232, 0.83) 100%); /* Change to a solid color */
+  color: #000000; /* Change font color */
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.left-inner-container {
+  width: 80%;
+  height:65%;
+  text-align: center;
+  line-height: 25px;
+}
+
+.right-container {
+  flex:1;
+  background-color:linear-gradient(90deg, #8cbdef 0%, rgba(61, 46, 232, 0.83) 100%); /* Change to a solid color */
+  color: #000000; /* Change font color */
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius: 25px;
+}
+
+.right-inner-container {
+  width:70%;
+  height:100%;
+  text-align:center;
+  
+}
+
+.round input , textarea{
+  border-radius: 7px;
+}
+
+input, textarea {
+	background-color: #eee;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
+  font-size:0.8rem;
+}
+
+input:focus, textarea:focus{
+  outline:1px solid #8cbdef; /* Change to a solid color */
+}
+
+button {
+	border-radius: 25px;
+	border: 1px solid #00b4cf;
+	background-color: #00b4cf;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+  cursor:pointer;
+}
+
+button:hover {
+  opacity:0.7;
+}
+
+@media only screen and (max-width: 600px) {
+  .left-container{
+    display: none;
+  }
+  .lg-view {
+    display:none;  
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .sm-view {
+    display:none;  
+  }
+}
+
+form p {
+  text-align:left;
+}
+
+.blank {
+
+padding: 100px; 
+
+
+
+}

@@ -1,86 +1,94 @@
-@charset "utf-8";
-  
+@charset "utf-8"; /* Set character encoding */
+
+/* Global styles */
 *{
-  margin :0;
-  padding :0;
-  box-sizing: border-box;
-  font-family: "Poppins";
+  margin :0; /* Remove default margin */
+  padding :0; /* Remove default padding */
+  box-sizing: border-box; /* Ensure box model includes padding and border */
+  font-family: "Poppins"; /* Set default font family */
 }
 
 html{
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* Smooth scrolling behavior for HTML element */
 }
 
+/* Body styles */
 body {
-  background-color: rgb(229, 240, 244);
+  background-color: rgb(229, 240, 244); /* Set background color */
 }
 
+/* Introduction paragraph styles */
 body p.Intro{
-  font-size: 21px;
-  text-align: center;
-  border: 3px solid black;
-  border-left: 30%;
-  margin-top: -50px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
-  background:  rgb(114, 133, 196);
-
+  font-size: 21px;  /* Set font size */
+  text-align: center;  /* Center-align text */
+  border: 3px solid black;  /* Add border */
+  border-left: 30%;  /* Set left border width */
+  margin-top: -50px;  /* Adjust margin from top */
+  padding-top: 30px;  /* Add padding */
+  padding-bottom: 30px;  /* Add padding */
+  padding-left: 20px;   /* Add padding */
+  padding-right: 20px; /* Add padding */
+  background:  rgb(114, 133, 196); /* Set background color */
 }
+
+/* Heading styles */
 h1 {
-  margin-left: 600px;
+  margin-left: 600px;   /* Adjust margin from left */
 }  
+
+/* Slideshow styles */
 .mySlides {
 	text-align:center;
-	display: none;
-	animation-name: fade;
-	
-	
+	display: none;  /* Hide slideshow by default */
+	animation-name: fade;	
 	}
 
  img {
-	
-	text-align:center;}
+	text-align:center;  /* Center-align images */
+  } 
  
  /* Slideshow container */
 
  .slideshowContainer {
-  position: relative;
-  overflow: hidden;
-  margin: 50px 0 75px;
-  width: 100%;
-  height: 400px;
+  position: relative;  /* Set position */
+  overflow: hidden;  /* Hide overflowing content */
+  margin: 50px 0 75px;   /* Set margins */
+  width: 100%;   /* Set width */
+  height: 400px;  /* Set height */
 }
 
+/* Slideshow image styles */
 .imageSlides {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  min-width: 70%;
-  min-height: 50%;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-  z-index: -1;
+  position: absolute; /* Set position */
+  left: 50%;  /* Position at center horizontally */
+  top: 50%;  /* Position at center vertically */
+  transform: translate(-50%, -50%);  /* Center-align image */
+  min-width: 70%;  /* Set minimum width */
+  min-height: 50%;  /* Set minimum height */
+  opacity: 0;  /* Hide image by default */
+  transition: opacity 1s ease-in-out;  /* Add transition effect */
+  z-index: -1;  /* Set z-index */
 }
 
 /* add 'visible' class via Javascript */
 .visible {
-  opacity: 1;
+  opacity: 1;  /* Make image visible */
 }
 
+/* Slideshow navigation arrow styles */
 .slideshowArrow {
-  font-size: 7em;
-  color: rgba(11, 4, 4, 0.5);
-  cursor: pointer;
-  transition: opacity 0.1s ease-in-out;
+  font-size: 7em;  /* Set font size */
+  color: rgba(11, 4, 4, 0.5);  /* Set color */
+  cursor: pointer;  /* Set cursor */
+  transition: opacity 0.1s ease-in-out;   /* Add transition effect */
 }
 
+/* Hover effect for slideshow arrows */
 .slideshowArrow:hover {
-  opacity: 0.75;
+  opacity: 0.75;  /* Change opacity on hover */
 }
 
+/* Positioning of left arrow */
 #leftArrow {
   position: absolute;
   left: 18%;
@@ -88,6 +96,7 @@ h1 {
   transform: translate(-50%, -50%);
 }
 
+/* Positioning of right arrow */
 #rightArrow {
   position: absolute;
   right: 18%;
@@ -95,14 +104,16 @@ h1 {
   transform: translate(50%, -50%);
 }
 
+/* Slideshow navigation circles styles */
 .slideshowCircles {
   position: absolute;
   bottom: 2%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);  /* Center-align circles */
   text-align: center;
 }
 
+/* Styling for slideshow navigation circles */
 .circle {
   display: inline-block;
   margin-left: 3px;
@@ -114,29 +125,29 @@ h1 {
   transition: 1s ease-in-out;
 }
 
+/* Active circle */
 .dot {
   background-color: rgba(255, 255, 255, 0.7);
   border: solid 2px rgba(27, 17, 17, 0.5);
 }
 
-
+/* Speciality name styling */
 .speciality_name
 {
   margin-left: 500px;
-
- 
 }
 
+/* Speciality dropdown styling */
 #speciality{
   width: 20%;
   padding: 15px 15px;
   border-radius: 6px;
   font-size: 15px;
   background: rgb(119, 126, 133);
-  margin-top:50px;
-
-  
+  margin-top:50px;  
 }
+
+/* Available select dropdown styling */
 .Available select{
   width: 12%;
   padding: 15px 15px;
@@ -145,24 +156,27 @@ h1 {
   background: rgb(139, 159, 178);
 }
 
+/* Scroll bar container styling */
 .scroll-bar
 { 
   height: 500px;
   width:45%;
   border: 1px solid gray;
   font-family: 'poppins', sans-serif;
-  overflow: auto;
-  white-space: nowrap;
+  overflow: auto;  /* Add scroll bar */
+  white-space: nowrap;  /* Prevent wrapping */
   margin-left: 450px;
 }
 
+/* Doctor image styling */
 .img .Dr{
   width: 100px;
   height: 50px;
-  object-fit: cover;
+  object-fit: cover;  /* Ensure image covers its container */
   border-radius: 70%;
 }
 
+/* Input box styling */
 .input-box {
   width: 150%;
   padding: 15px 15px;
@@ -173,12 +187,10 @@ h1 {
 
 } 
 
-
+/* Doctor select button styling */
 .dr_select
 {
   padding:10px;
   background-color:rgb(118, 129, 139) ;
-  border-radius: 6px;
-
-  
+  border-radius: 6px;  /* Add border radius */  
 }

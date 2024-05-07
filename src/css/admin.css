@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+     
+     background:linear-gradient(90deg, #234568 0%, rgba(47, 128, 199, 0.83,)100%) ;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+.admin-panel {
+    width: 35%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.admin-panel button {
+    padding: 10px 10px;
+    background-color: #2240ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.stats {
+    width: 40%;
+    height: 40%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+}
+
+.statdet {
+    margin: 10px;
+    
+}
+
+.statdet h1 {
+    font-size: 30px;
+}
+
+.statdet h2 {
+    font-size:50px;
+}
+
+.articles {
+    /* width: 94%; */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+.arti {
+    display: flex;
+    justify-content: space-between;
+}
+
+.articles button {
+    padding: 10px 10px;
+    background-color: #2240ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+.article {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 45%;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.article button {
+    padding: 10px 10px;
+    background-color: #2240ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+input[type="text"], input[type="password"] {
+    width: 75%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+   
+    border-radius: 8px;
+}
+
+    
+
+.adminpic img {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+}
+
+.rowac {
+    display: flex;
+    margin: 20px
+}
+.detls {
+    margin: 5px 40px;
+}
+
+.detls p {
+    margin-bottom: 50px;
+}

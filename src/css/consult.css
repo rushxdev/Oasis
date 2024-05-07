@@ -1,20 +1,20 @@
 body {
-  font-family: "Poppins", sans-serif;
-  background-color: #f2f2f2;
+  font-family: "Poppins", sans-serif;  /* Set the font family for the entire document */
+  background-color: #f2f2f2; /* Set the background color for the body */
 
 }
 
+/* Center-align heading within a form */
 form h1 {
-
   text-align: center;
-
 }
 
+/* Style for form elements */
 form {
   background-color: #ffffff;
-
 }
 
+/* Style for input rows */
 .input-row {
   display: flex;
   justify-content: space-between;
@@ -23,17 +23,16 @@ form {
 
 }
 
+/* Style for left and right inputs within a row */
 .left-input label,
 .right-input label {
-  display: block;
-  /* Labels display as block elements */
+  display: block;  /* Labels display as block elements */
 }
 
-
+/* Style for form submit button */
 form {
   width: 800px;
   margin: 0 auto;
-
   padding: 50px;
   padding-top: 20px;
   border-radius: 5px;
@@ -41,6 +40,7 @@ form {
   border: 2px solid rgb(0, 0, 0);
 }
 
+/* Style for form submit button */
 form input[type="submit"] {
   width: 100%;
   padding: 15px;
@@ -50,6 +50,7 @@ form input[type="submit"] {
   box-sizing: border-box;
 }
 
+/* Style for form submit button */
 form input[type="submit"] {
   background-color: #01522f;
   color: white;
@@ -58,10 +59,12 @@ form input[type="submit"] {
   font-size: 17px;
 }
 
+/* Hover effect for submit button */
 form input[type="submit"]:hover {
   background-color: rgb(19, 157, 116);
 }
 
+/* Center-align heading */
 h1 {
   text-align: center;
 }

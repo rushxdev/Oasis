@@ -1,3 +1,4 @@
+/* Global reset and font setup */
 *{
     margin:0;
     padding: 0;
@@ -6,11 +7,11 @@
     }
     
     html {
-    scroll-behavior:smooth;
+    scroll-behavior:smooth;  /* Smooth scrolling for HTML */
     height: 100%;
     }  
     
-      
+      /* Header styles */
       .header {
           padding: 65px;
           text-align: center;
@@ -37,6 +38,7 @@
           margin-top: 20px;
         }
         
+        /* Logo and user icon styles */
         .header img.logo {
           border-radius: 8px;
           position: absolute;
@@ -50,7 +52,6 @@
           padding: 1px; 
       
         }
-        
         .header img.user
         {
           border-radius: 8px;
@@ -62,10 +63,7 @@
           object-fit: cover;
       
         }
-        
-       
-        
-        
+        /* Logout button styles */
         #logout-button{
           background-color: #4a0443; /* Background color of the button */
           color: #fff; /* Text color */
@@ -74,7 +72,7 @@
           border: none; /* Remove button border */
           border-radius: 3px; /* Rounded corners */
           cursor: pointer; /* Show pointer cursor on hover */
-          transition: background-color 0.3s ease;
+          transition: background-color 0.3s ease;  /* Define transition effect for background color */
           position: absolute;
           margin-left: 650px;
           top: 60px;
@@ -100,42 +98,43 @@
           background-color: #0b123a; /* Darker background color on hover */
         }
     
-    
+    /* Styling for the navigation bar */
         #nav1 {
-            list-style-type: none;
+            list-style-type: none; /* Remove default list styling */
             margin: 0;
             padding: 1px;
-            overflow: hidden;
+            overflow: hidden;  /* Hide overflowing content */
             background-color: #122177;
-            position: fixed;
-            z-index: 1000;
+            position: fixed;  /* Fix the navigation bar position */
+            z-index: 1000;   /* Set a high z-index to ensure it appears above other content */
             width: 100%;
              height: 40px;
               top: 110px; 
           }
           
+          /* Style for each list item in the navigation bar */
           #nav1 li {
-            float: left;
+            float: left;  /* Float the list items to create a horizontal layout */
             width: 20%;
             border-right: #333;
           }
-    
+
+          /* Remove right border from the last list item */
           #nav1 li:last-child a {
             border-right: none;
         }
-          
+          /* Style for links within the navigation bar */
           #nav1 li a {
-          
-    
             font-size:18px;
-            display: block;
+            display: block;  /* Make links block-level elements */
             color: white;
             text-align: center;
             padding: 10px 10px;
-            text-decoration: none;
+            text-decoration: none;  /* Remove default underline */
             width:220px;
           }
           
+          /* Styling for links on hover */
           #nav1 li a:hover {
             background-color: #111;
             width:100%;
@@ -151,28 +150,32 @@ footer {
   height:240px;
 }
   
+  /* Styling for the container within the footer */
   .container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 100%;
-  margin: 0 auto;
+  justify-content: space-between;  /* Space items evenly along the main axis */
+  align-items: center;  /* Center items along the cross axis */
+  max-width: 100%;  /* Set maximum width */
+  margin: 0 auto;  /* Center the container horizontally */
   margin-left: 50px;
   margin-right: 50px;
 }
+
+/* Styling for the logo within the footer */
 .footerlogo img{
   width: 80px;
   height: 80px;
-  object-fit: cover;
+  object-fit: cover;  /* Ensure the image covers the entire space */
   border-radius: 50%;
   background: #ffffff;
   padding: 2px;  
 }
 
+/* Styling for the mid1-section and mid2-section */
 .mid1-section  .mid2-section {
   display: flex;
   align-items: center;
-  top:1px;
+  top:1px;/* Adjust top spacing */
 }
 
 
@@ -197,6 +200,7 @@ footer {
    height: 45px;
 }
 
+/* Styling for quick links */
 #quicklinks{
   list-style-type: none;
   margin-top: 5px;
@@ -224,12 +228,12 @@ footer {
 .mid1-section #p1{
   font-size: 25px;
   margin-right: 100px;
-  text-align: center;
+  text-align: center;  /* Center-align text */
 }
 
 .mid1-section #p2{
   font-size: 25px;
-  text-align: center;
+  text-align: center; /* Center-align text */
   margin-right: 70px;
 }
 
@@ -249,75 +253,81 @@ body {
 }
 
 .container1 {
-    max-width: 800px;
-    margin: 50px auto 20px;
+    max-width: 800px; /* Set the maximum width of the container */
+    margin: 50px auto 20px;   /* Set margins: top 50px, bottom 20px, auto left/right (to center the container horizontally) */
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);  /* Add a box shadow for the container */
 }
 
 h1 {
-    text-align: center;
-    margin-bottom: 5px;
+    text-align: center;  /* Center-align text within h1 elements */
+    margin-bottom: 5px;  /* Add a small bottom margin for spacing */
     
 }
 
+/* Set flex property for elements with class 'column' */
 .column {
-    flex: 1;
-    padding-right: 20px;
+    flex: 1;  /* Allow flex items to grow equally within their container */
+    padding-right: 20px; /* Add right padding to create spacing between columns */
 }
 
+/* Style definition for a column layout */
 .column-left {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex: 1;  /* Take up available space within flex container */
+    display: flex;  /* Use flexbox layout */
+    flex-direction: column;  /* Arrange items vertically */
+    align-items: center;  /* Center items along the cross axis */
 }
 
 /* Form Styles */
 form {
-    display: flex;
-    flex-wrap: wrap;
+    display: flex;   /* Use flexbox layout for form elements */
+    flex-wrap: wrap;  /* Allow form elements to wrap to the next line */
 }
 
 label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+    display: block;  /* Display labels as block elements */
+    margin-bottom: 5px;  /* Add margin at the bottom of each label */
+    font-weight: bold;  /* Apply bold font weight to labels */
 }
 
 input[type="text"],
 select {
-    width: calc(100% - 10px);
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    width: calc(100% - 10px);  /* Set width to 100% minus 10px for padding and borders */
+    padding: 10px;  /* Add padding to input fields */
+    margin-bottom: 15px;  /* Add margin at the bottom of each input field */
+    border: 1px solid #ccc;   /* Apply a 1px solid border */
+    border-radius: 5px;  /* Apply border-radius for rounded corners */
 }
 
 select {
-    width: 100%;
+    width: 100%; /* Set the width of all select elements to 100% */
 }
 
+/* Styling for the refund button */
 .refund_btn {
-    background-color: #c60000;
-    color: white;
+    background-color: #c60000; /* Background color */
+    color: white;  /* Text color */
     padding: 14px 20px;
     margin: 8px 0;
     font-size:15px;
-    border: none;
+    border: none;  /* Remove border */
     border-radius: 4px;
-    cursor: pointer;
+    cursor: pointer;  /* Cursor style */
     width: 100%;
 }
 
+/* Hover effect for the refund button */
 .refund_btn:hover {
     background-color: #ff0000;
 }
 
+/* Ensure images don't exceed container width and adjust height accordingly */
 img {
     max-width: 100%;
     height:auto;
-    margin-bottom: 20px;
+    margin-bottom: 20px;  /* Add space at the bottom */
 }
+

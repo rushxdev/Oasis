@@ -72,7 +72,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['refund_btn'])) {
                 $update_stmt->bind_param("s", $referenceNo);
 
                 if ($update_stmt->execute()) {
-                    echo "Payment history has been updated correctly";
+                    $booking_sql = "DELETE FROM booking WHERE booking_id = ?";
+                    $booking_stmt = $conn->prepare($booking_sql);
+                    $booking_stmt->bind_param("s", $referenceNo);
+                    if ($booking_stmt->execute()) {
+                        echo "Payment history has been updated correctly";
+                    } else {
+                        echo "Booking deletion failiure.";
+                    }
+                    
                 } else {
                     echo "Error updating payment record: " . $update_stmt->error;
                 }
@@ -83,7 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['refund_btn'])) {
             } else {
                 echo "Error deleting record from payment table: " . $delete_stmt->error;
             }
-
+            // Close statement and connection
             $delete_stmt->close();
             $update_stmt->close();
 
@@ -119,16 +127,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['refund_btn'])) {
 
                 <!--Selecting paid services-->
                 <label for="services">SELECT THE PAID SERVICE:</label>
-                <select id="services" name="services">
+                <select id="services" name="services" readonly>
                     <option value="">Select</option>
-                    <option value="Channeling" id="Channeling">Channeling</option>
                     <option value="Consulting" id="Consulting">Consulting</option>
-                    <option value="Prescriptions" id="Prescriptions">Prescriptions</option>
                 </select>
                 <br><br>
                 <!--Input for reference numbers-->
                 <label>REFERENCE NUMBER:</label>
-                <input type="text" placeholder="Enter Reference No:" name="reference_no">
+                <input type="text" value="<?php echo $_POST["referance_no"] ?>" placeholder="Enter Reference No:" name="reference_no" readonly>
                 <br><br>
                 <!--Input for payment amount-->
                 <label>PAYMENT AMOUNT:</label>

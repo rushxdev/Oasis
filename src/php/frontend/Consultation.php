@@ -1,16 +1,18 @@
 <?php
-session_start();
+session_start(); // Start or resume a session to persist data across multiple pages
 
-include_once ("../backend/config.php");
+include_once ("../backend/config.php"); // Include the configuration file which contains important settings
 
+// Check if the form has been submitted (Select_btn is set in the form)
 if (isset($_POST["Select_btn"])) {
+    // Store form data in session variables for later us
     $_SESSION['drName'] = $_POST["drName"];
     $_SESSION['date'] = $_POST["date"];
     $_SESSION['time'] = $_POST["time"];
     $_SESSION['Specialized_field'] = $_POST["Specialized_field"];
 
     header("Location: consult.php"); // Redirect to the confirmation page after setting session variables
-    exit();
+    exit(); // Ensure that no other output is sent before redirecting
 }
 
 
@@ -20,29 +22,32 @@ if (isset($_POST["Select_btn"])) {
 
 <head>
     <title>Consultation Information</title>
+    <!-- Meta tags -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- External CSS files -->
     <link rel="stylesheet" href="../../css/fa/css/font-awesome.min.css">
     <link rel="stylesheet" href="../../css/Consultation.css">
     <link rel="stylesheet" href="../../css/header_footer.css">
 </head>
 <body>
-    <?php include_once ("header.php"); ?>
-    <h1>Consultation Information</h1>
+    <?php include_once ("header.php"); ?>   <!-- Include header -->
 
-    <div class="slideshowContainer">
+    <h1>Consultation Information</h1> <!-- Page title -->
+
+    <div class="slideshowContainer">  <!-- Slideshow container -->
         <img class="imageSlides" src="../../image/slideshow1.jpeg">
         <img class="imageSlides" src="../../image/slideshow2.jpeg">
         <img class="imageSlides" src="../../image/slideshow3.jpeg">
         <img class="imageSlides" src="../../image/slideshow4.jpeg">
         <img class="imageSlides" src="../../image/img4.jpg">
 
-
+        <!-- Slideshow navigation arrows -->
         <span id="leftArrow" class="slideshowArrow">&#8249;</span>
         <span id="rightArrow" class="slideshowArrow">&#8250;</span>
 
-        <div class="slideshowCircles">
+        <div class="slideshowCircles"> <!-- Slideshow circles for navigation -->
             <span class="circle dot"></span>
             <span class="circle"></span>
             <span class="circle"></span>
@@ -52,6 +57,7 @@ if (isset($_POST["Select_btn"])) {
 
     </div>
     <br>
+    <!-- Introduction section -->
     <p class="Intro">Welcome to our Hospital Consulting services, where expertise meets innovation to transform
         healthcare facilities. Our seasoned consultants specialize in navigating the complex landscape of hospital
         management, offering tailored solutions to enhance operational efficiency, optimize patient care, and ensure
@@ -59,9 +65,9 @@ if (isset($_POST["Select_btn"])) {
         strategizing for long-term sustainability, we're dedicated to empowering healthcare institutions to thrive in
         today's dynamic healthcare environment. Let us partner with you to elevate your hospital's performance and
 
-    <div class="Speciality">
+    <div class="Speciality">  <!-- Speciality selection dropdown -->
         <label for="Services" class="speciality_name">SPECIALITY :</label>
-        <select id="speciality" name="Specialized_field">
+        <select id="speciality" name="Specialized_field">  <!-- Options for specialities -->
             <option name="select">Select</option>
             <option value="Allergy">Allergy and Immunology</option>
             <option value="Anesthesiology">Anesthesiology</option>
@@ -84,11 +90,13 @@ if (isset($_POST["Select_btn"])) {
 
     <br>
     <br>
+     <!-- Doctor information section -->
     <div class="scroll-bar">
         <div class="input-box">
             <div class="Allergy">
-                <form action="consult.php" method="POST" id="doctorForm">
+                <form action="consult.php" method="POST" id="doctorForm">  <!-- Form for selecting a doctor -->
                     <img class="Dr" src="../../image/Dr.Suranjith .png" alt="Dr" width="70px" height="70px">
+                     <!-- Doctor information -->
                     <p class="drName" value="Suranjith" name="drName"><b>PROF . SURANJITH SENEWIRATHNE</b></p>
                     <p>Professor and Consultant in Clinical Immunology and Allergy, Royal Free Hospital and University
                         College London.
@@ -105,7 +113,7 @@ if (isset($_POST["Select_btn"])) {
                     <b>Available Dates:</b>Monday & Tuesday
                     <br>
                     <br>
-                    <div class="Available">
+                    <div class="Available"> <!-- Input fields for selecting date and time -->
                         <b> <label for="Select a Date  "> Select a Date :</label></b>
                         <select id="date" name="date" required>
                             <option name="select">Select</option>
@@ -123,7 +131,7 @@ if (isset($_POST["Select_btn"])) {
                     </div>
                     </p>
                     <input type="button" onclick="redirectToConsultation('PROF . SURANJITH SENEWIRATHNE', 'Allergy')"
-                        value="Select" class="dr_select">
+                        value="Select" class="dr_select">  <!-- Submit button to select the doctor -->
 
 
                 </form>
@@ -1177,9 +1185,9 @@ if (isset($_POST["Select_btn"])) {
             </div>
         </div>
 
-    </div>
-    <?php include_once ("footer.php"); ?>
-    <script src="../../js/Consultation.js"></script>
+    </div> <!-- Closing tag for the container div -->
+    <?php include_once ("footer.php"); ?>  <!-- Include footer section using PHP include_once function -->
+    <script src="../../js/Consultation.js"></script>  <!-- Include JavaScript file for additional functionality -->
 </body>
 
 </html>

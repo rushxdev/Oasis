@@ -7,12 +7,12 @@
             <a href="channeling.php" id="nav_channeling_button">Channeling</a>
             <a href="prescription.php" id="nav_prescription_button">Prescription Refill</a>
             <a href="consultation.php" id="nav_consulting_button">Consulting & Advice</a>
-            <a href="#" id="nav_faq_button">FAQ's</a>
+            <a href="faq.php" id="nav_faq_button">FAQ's</a>
         <?php } else { ?>
             <a href="#" id="nav_about_button">About Us</a>
-            <a href="#" id="nav_branch_button">Branch Locator</a>
-            <a href="#" id="nav_blog_button">Health Blog</a>
-            <a href="#" id="nav_contact_button">Contact Us</a>
+            <a href="branch.php" id="nav_branch_button">Branch Locator</a>
+            <a href="blog.php" id="nav_blog_button">Health Blog</a>
+            <a href="contact.php" id="nav_contact_button">Contact Us</a>
         <?php } ?>
     </div>
     <div class="accounts">

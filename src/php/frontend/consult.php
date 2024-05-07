@@ -52,8 +52,8 @@ if (isset($_POST['submit'])) {
         $fileExt = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
         $allowed = array('pdf', 'doc', 'docx');
 
-        // Validation comment krla thiyena eka ain krnna
-        if (/*in_array($fileExt, $allowed) &&*/ $fileError === 0 && $fileSize > 0) {
+        // Validation files
+        if (in_array($fileExt, $allowed) && $fileError === 0 && $fileSize > 0) {
 
             //header("Location: ReservationSuccess.html");
 
@@ -70,8 +70,8 @@ if (isset($_POST['submit'])) {
 
                 if ($stmt->execute()) {
                     // Redirect after successful submission
-
-                    header("Location: ReservationSuccess.html");
+                    $booking_id = $conn->insert_id;
+                    header("Location: payment.php?bookingId=".$booking_id);
                     exit;
 
                 } else {
@@ -92,9 +92,9 @@ $conn->close();
 ?>
 
 <html>
-
 <head>
     <title>Consultation Information</title>
+    <!-- Link to CSS files -->
     <link rel="stylesheet" href="../../css/consult.css">
     <link rel="stylesheet" href="../../css/header_footer.css">
     <link rel="stylesheet" href="../../css/fa/css/font-awesome.min.css">
@@ -102,31 +102,33 @@ $conn->close();
 </head>
 
 <body>
+<!-- Including header -->
     <?php include_once("header.php"); ?>
     <br><br><br><br><br>
+    <!-- Consultation form -->
     <form action="consult.php" method="post" enctype="multipart/form-data">
 
 
         <h1>Consultation Information</h1>
-
         <div class="input-row">
-
+            <!-- Left input section -->
             <div class="left-input">
+            <!-- Speciality input -->
                 <label> SPECIALITY</label><br>
                 <input type="text" name="speciality" id="Speciality" style="width:  250px; height: 30px;"
                     value="<?php echo $Specialized_field ?>"><br><br>
 
-
+                <!-- Doctor name input -->
                 <label>DOCTOR NAME</label><br>
                 <input type="text" name="DoctorName" id="DrName" style="width: 250px; height: 30px;"
                     value="<?php echo $drName ?>"><br><br>
-
+                 <!-- Patient name input -->
                 <label>PATIENT NAME</label><br>
                 <input type="text" name="patient_name" style="width:  250px; height: 30px;"><br><br>
-
+                 <!-- Age input -->
                 <label>AGE</label><br>
                 <input type="text" name="age" style="width:  250px; height: 30px;"><br><br>
-
+                <!-- Status select -->
                 <label for="Status">STATUS</label><br>
 
                 <select id="Status" style="width:  250px; height: 30px;" name="status">
@@ -138,38 +140,34 @@ $conn->close();
 
 
                 <br><br>
-
+                 <!-- Gender radio buttons -->
                 <label>GENDER</label><br>
                 <input type="radio" id="male" name="gender" value="male" required>Male<br>
                 <input type="radio" id="female" name="gender" value="female">Female<br>
                 <input type="radio" id="Other" name="gender" value="other">Other<br><br><br>
 
 
-
+                 <!-- Medical upload input -->
                 <label>UPLOAD YOUR MEDICALS </label><br>
                 <input type="file" id="fileToUpload" name="fileToUpload" class="input-box2">
 
 
                 <br><br><br>
-
-
-
-
-
             </div>
-
-
+            <!-- Right input section -->
             <div class="right-input">
 
                 <br>
+                <!-- Image -->
                 <img src="../../image/Consulting2.png" width="300px" height="200px"><br><br><br>
+                <!-- Submit button -->
                 <input type="submit" value="Submit" id="submit" name="submit">
 
 
             </div>
 
         </div>
-
+        <!-- Medical history description -->
         <label>DESCRIBE YOUR MEDICAL HISTORY </label><br><br>
         <textarea id="address" name="Describe" id="Describe" rows="8" cols="65" required></textarea><br><br>
     </form>
@@ -177,7 +175,9 @@ $conn->close();
     <br>
     <br>
 
+    <!-- Including footer -->
     <?php include_once ("footer.php"); ?>
+    <!-- Link to JavaScript file -->
     <script src="../../js/consult.js"></script>
 
 </body>

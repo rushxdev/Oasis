@@ -1,34 +1,37 @@
-document.getElementById("services").onchange = function()
+document.getElementById("services").onchange = function() // This function is triggered when the value of the services dropdown changes
  {
+     // Get the selected service from the dropdown
     var selectedService = document.getElementById("services").value;
 
+    // Check which service is selected and set the corresponding payment amount
     if (selectedService === "Channeling") 
     {
         document.getElementById("payment").value = "3000";
-        document.getElementById("payment").disabled = true;
+        document.getElementById("payment").disabled = true; // Disable payment input
     } 
 
     else if (selectedService === "Consulting")
     {
         document.getElementById("payment").value = "5000";
-        document.getElementById("payment").disabled = true;
+        document.getElementById("payment").disabled = true; // Disable payment input
 
     } 
     
     else if (selectedService === "Prescriptions")
     {
          document.getElementById("payment").value = "1000";
-         document.getElementById("payment").disabled = true;
+         document.getElementById("payment").disabled = true; // Disable payment input
     }
 
      else
     {
+        // If no service is selected, clear the payment input
           document.getElementById("payment").value = "";
     }
     
 };
 
-
+// This function runs when the DOM content is loaded
 document.addEventListener("DOMContentLoaded", function(){
     // Get reference to the payment method radio buttons
     var paymentMethods = document.querySelectorAll('input[type="radio"][name="paymentMethod"]');

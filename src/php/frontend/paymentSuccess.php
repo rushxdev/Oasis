@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Meta tags for character set and viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Success</title>
+    <title>Payment Success</title><!-- Title of the page -->
+    <!-- Internal CSS styles -->
     <style>
+    /* Table styles */
         table {
             border-collapse: collapse;
             width: 120%;
@@ -16,7 +19,7 @@
             text-align: center;
         }
 
-        
+        /* Styling for table cells */
         td
         {
             background-color:rgb(142,223,255);
@@ -31,10 +34,12 @@
 
         }
 
+        /* Heading styles */
         h2 {
             font-size: 24px;
             margin-bottom: 10px;
         }
+        /* Body styles */
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
@@ -45,11 +50,13 @@
             align-items: center;
             height: 100vh;
         }
+        /* Container styles */
         .container {
             text-align: center;
             margin-top: -100px;
             margin-left: -20px;
         }
+        /* Message styles */
         .message {
             background-color: #2db6dc;
             color: #fff;
@@ -69,8 +76,10 @@
 <body>
     <div class="container">
         <?php
+        // Starting PHP session and including configuration file
         session_start();
         include_once("../backend/config.php");
+        // Checking database connection
         if ($conn->connect_error) {
             die('Connection Failed: ' . $conn->connect_error);
         }
@@ -93,6 +102,7 @@
                     <h2>Payment successful! Thank you.</h2>
                     <p>Your payment has been processed successfully.</p>
                 </div>
+                <!-- Payment details table -->
                 <br><br>
                 <h1>Payment Details</h1>
                 <table>
@@ -129,6 +139,7 @@
         }
         ?>
     </div>
+    <!-- Button to return to profile page -->
     <a href="profile.php"><button style= "background-color:#007bff; color:#fff; padding: 8px 16px; border-radius: 4px;">Back to Home</button></a>
 </body>
 </html>

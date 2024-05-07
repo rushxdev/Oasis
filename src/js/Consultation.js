@@ -1,8 +1,9 @@
+// Get references to HTML elements
 var imageSlides = document.getElementsByClassName('imageSlides');
 var circles = document.getElementsByClassName('circle');
 var leftArrow = document.getElementById('leftArrow');
 var rightArrow = document.getElementById('rightArrow');
-var counter = 0;
+var counter = 0;  // Counter to keep track of the current image
 
 // HIDE ALL IMAGES FUNCTION
 function hideImages() {
@@ -60,7 +61,7 @@ function arrowClick(e) {
     }
   }
 }
-
+// Add click event listeners to left and right arrows
 leftArrow.addEventListener('click', arrowClick);
 rightArrow.addEventListener('click', arrowClick);
 

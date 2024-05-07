@@ -1,23 +1,27 @@
 <?php
-
-require_once 'dbh.inc.php';
-
-if (isset($_POST["submit"])) {
-    $user_id = $_POST['userid'];
-    $branch =  $_POST["branch"];
-    $specialization = $_POST["specialization"];
-    $doctor = $_POST["doctor"];
-    $channeldate = $_POST["chaneldate"];
-    $channeltime = $_POST["chaneltime"];
-    $fullname = $_POST["fullname"];
-    $phone = $_POST["phone"];
-    $gender = $_POST["gender"];
-    $DOB = $_POST["dob"];
-    $age = $_POST["age"];
-
+include 'config.php'; 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $specialization = $_POST['specialization'];
+    $doctor_name = $_POST['doctor_name'];
+    $date = $_POST['date'];
+    $time = $_POST['time'];
+    $patient_name = $_POST['patient_name'];
+    $age = $_POST['age'];
     
-    require_once 'functions.inc.php';
-
-    createappointment($conn, $user_id, $branch, $specialization, $doctor, $channeldate, $channeltime, $fullname, $phone, $gender, $DOB, $age);
+    
+    session_start();
+    $username = $_SESSION['username'];
+    $user_id = $_SESSION['userid'];
+    
+   
+    $sql = "INSERT INTO appointment (patient_name, age, email, doctor_name, specialization, date, time, registered_number)
+            VALUES ('$patient_name', '$age', '', '$doctor_name', '$specialization','$date','$time', '$user_id')";
+    
+    if ($conn->query($sql) === TRUE) {
+        header("Location:../frontend/profile.php"); 
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
 }
 
+$conn->close();
